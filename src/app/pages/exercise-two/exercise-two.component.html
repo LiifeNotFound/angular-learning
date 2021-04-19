@@ -1,0 +1,15 @@
+<div class="todo-app">
+  <ul class="todo-list">
+    <li *ngFor="let todo of todoList">
+      <div class="todo">
+        <div class="start">
+          <span>{{ todo.description }}</span>
+          <span>{{ todo.date }}</span>
+        </div>
+        <div class="end">
+          <span class="material-icons">done</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

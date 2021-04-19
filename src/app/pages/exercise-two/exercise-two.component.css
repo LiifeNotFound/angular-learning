@@ -1,0 +1,59 @@
+.todo-app {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.todo-app ul {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+}
+
+.todo-app .todo {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+.todo-app li {
+  border-bottom: black solid 2px;
+  background: red;
+  border-radius: 1rem;
+
+  width: 100%;
+}
+.todo-app li .start {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-app .todo div {
+  padding: 1rem;
+}
+
+.todo-app li:hover {
+  transform: scale(1.01);
+}
+.status {
+  padding: 1rem;
+}
+
+.end span {
+  font-size: 2rem;
+  transition: all 0.2s;
+}
+
+.end span:hover {
+  transform: scale(1.3);
+}
+.start span:nth-of-type(1){
+    font-weight: 600;
+}
+.start span:nth-of-type(2){
+    font-weight: 200;
+}

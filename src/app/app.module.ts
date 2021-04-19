@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ExerciseOneComponent } from './pages/exercise-one/exercise-one.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ExerciseTwoComponent } from './pages/exercise-two/exercise-two.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     PageNotFoundComponent,
     ExerciseOneComponent,
     HomePageComponent,
+    ExerciseTwoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
