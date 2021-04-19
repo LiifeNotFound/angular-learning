@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem">
+  <img
+    src="{{
+      imgSrc ||
+        'https://fotos.jornaldocarro.estadao.com.br/uploads/2019/04/21122627/5ee03295-2020-nissan-gt-r-19.jpg'
+    }}"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body bg-dark text-white">
+    <h5 class="card-title">{{title || "Title was not provided"}}</h5>
+    <p class="card-text">
+      {{description || "Description was not provided"}}
+    </p>
+    <a href="{{url || '#'}}" class="btn btn-primary">Ver</a>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.exercises{
+    width: 100%;
+    height: fit-content;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    background: var(--bg);
+}
+
+ul{
+    list-style: none;
+}
+
+.homepage{
+    background: var(--bg);
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
