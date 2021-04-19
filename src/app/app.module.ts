@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { ExerciseOneComponent } from './pages/exercise-one/exercise-one.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ExerciseTwoComponent } from './pages/exercise-two/exercise-two.component';
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ExerciseTwoComponent } from './pages/exercise-two/exercise-two.componen
     ExerciseOneComponent,
     HomePageComponent,
     ExerciseTwoComponent,
+    TodoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

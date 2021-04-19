@@ -1,15 +1,54 @@
 <div class="todo-app">
+  <app-todo>
+    <form id="myForm" ng-submit="handleSubmit()">
+      <div class="input">
+        <div class="icon-area">
+          <i><span class="material-icons"> article </span></i>
+        </div>
+        <div class="input-area">
+          <input
+            placeholder=" "
+            type="text"
+            class="custom-input"
+            id="todoDescription"
+          />
+          <span class="custom-placeholder">Description</span>
+        </div>
+      </div>
+      <div class="input">
+        <div class="icon-area">
+          <i><span class="material-icons">
+            date_range
+            </span></i>
+        </div>
+        <div class="input-area">
+          <input
+            placeholder=" "
+            type="datetime-local"
+            class="custom-input"
+            id="todoDate"
+          />
+          <span class="custom-placeholder">Date</span>
+        </div>
+      </div>
+      <button (click)="addTodo()">
+        <span class="material-icons">add</span>
+      </button>
+    </form>
+  </app-todo>
   <ul class="todo-list">
     <li *ngFor="let todo of todoList">
-      <div class="todo">
+      <app-todo>
         <div class="start">
           <span>{{ todo.description }}</span>
           <span>{{ todo.date }}</span>
         </div>
         <div class="end">
-          <span class="material-icons">done</span>
+          <span class="material-icons delete" (click)="delTodo(todo)"
+            >delete</span
+          >
         </div>
-      </div>
+      </app-todo>
     </li>
   </ul>
 </div>

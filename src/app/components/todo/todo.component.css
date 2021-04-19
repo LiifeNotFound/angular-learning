@@ -1,0 +1,17 @@
+ul {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+}
+
+.todo {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+

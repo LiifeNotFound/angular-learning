@@ -1,31 +1,29 @@
 .todo-app {
   background: var(--bg);
   display: flex;
-  justify-content: center;
-  padding: 1rem;
-}
-.todo-app ul {
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
 }
 
-.todo-app .todo {
-  display: flex;
-  padding: 1rem;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  width: 100%;
-}
 .todo-app li {
   border-bottom: black solid 2px;
-  background: red;
+  background: rgb(45, 124, 189);
   border-radius: 1rem;
-
+  margin: 0.2rem 0;
+  max-width: 500px;
+  transition: all 0.2s;
   width: 100%;
+}
+
+.todo-app li:hover .end {
+  opacity: 1;
+}
+
+.end {
+  transition: all 0.2s;
+  opacity: 0;
 }
 .todo-app li .start {
   display: flex;
@@ -46,14 +44,135 @@
 .end span {
   font-size: 2rem;
   transition: all 0.2s;
+  padding: 0.4rem;
+  border-radius: 50%;
 }
 
 .end span:hover {
   transform: scale(1.3);
+  background: #000;
 }
-.start span:nth-of-type(1){
-    font-weight: 600;
+.start span:nth-of-type(1) {
+  font-weight: 600;
 }
-.start span:nth-of-type(2){
-    font-weight: 200;
+.start span:nth-of-type(2) {
+  font-weight: 200;
+}
+
+.end span {
+  user-select: none;
+}
+
+.end span {
+  cursor: pointer;
+  margin: 0 0.3rem;
+  box-shadow: inset rgba(255, 255, 255, 0.096) -3px -3px 5px,
+    inset rgba(0, 0, 0, 0.103) 3px 3px 3px;
+}
+.start span {
+  max-width: 390px;
+  word-break: break-all;
+}
+
+.input {
+	width: 500px;
+	display: flex;
+	margin: 0.3rem;
+	background: rgb(231, 235, 236);
+	border-radius: 1rem;
+}
+
+.input .icon-area {
+	border-right: 1px dashed rgb(170, 170, 170);
+	position: relative;
+	width: 50px;
+	margin: 0.7rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.input .input-area {
+	padding: 0 0.7rem;
+	outline: 0;
+	border: 0;
+}
+
+.input .input-area {
+	position: relative;
+	width: 80%;
+}
+
+.input span {
+	pointer-events: none;
+	user-select: none;
+	font-weight: 900;
+	position: absolute;
+	left: 0.8rem;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.4s;
+	color: rgb(138, 138, 138);
+}
+
+.input .input-area input {
+	padding: 1rem 0;
+	background: transparent;
+	outline: 0;
+	width: 100%;
+	border: 0;
+	color: rgb(146, 144, 144);
+}
+
+.custom-input:focus {
+	transform: translateY(8px);
+}
+
+.input:hover {
+	background: rgb(226, 227, 228);
+}
+
+.custom-input:focus + .custom-placeholder {
+	color: rgb(46, 46, 46);
+	position: absolute;
+	font-weight: 600;
+	font-size: 0.8rem;
+	top: 25%;
+}
+
+.custom-input:not(:placeholder-shown) + .custom-placeholder {
+	color: rgb(46, 46, 46);
+	position: absolute;
+	font-weight: 600;
+	font-size: 0.8rem;
+	top: 25%;
+}
+
+.custom-input:not(:placeholder-shown) {
+	transform: translateY(5px);
+}
+
+.input .icon-area i {
+	color: rgb(83, 83, 83);
+} 
+
+button {
+	width: fit-content;
+    transition: all .33s;
+	padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    box-shadow: rgba(43, 47, 49, 0.582) 0 .1rem .2rem;
+}
+
+button:hover {
+	transform: scale(1.1);
+}
+
+
+#myForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

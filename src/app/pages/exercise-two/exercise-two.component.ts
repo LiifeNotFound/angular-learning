@@ -1,48 +1,82 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import date from 'date-and-time';
+declare var $: any;
 
+/**
+ * Component props
+ */
 @Component({
   selector: 'app-exercise-two',
   templateUrl: './exercise-two.component.html',
-  styleUrls: ['./exercise-two.component.css']
+  styleUrls: ['./exercise-two.component.css'],
 })
-export class ExerciseTwoComponent implements OnInit {
-  todoList: object
-  constructor() { 
+
+/**
+ * Exports Exercise two class by default
+ */
+export class ExerciseTwoComponent {
+  // Define todo var
+  todoList: { id: number; date: String; description: string }[];
+  delTodo: Function;
+  addTodo: Function;
+  handleSubmit: Function;
+
+  /**
+   * Class constructor
+   */
+  constructor() {
+    // set the function to delete todo's
+    this.delTodo = (todo): void => {
+      this.todoList = this.todoList.filter((val) => val.id != todo.id);
+    }; 
+    // set the function to handle submit events
+    this.addTodo = (): boolean => {
+      // get full date
+      const dateTime = new Date($('#todoDate').val());
+
+      // add new todo to the array
+      this.todoList.push({
+        id: Math.floor(Math.random() * 10_000),
+        date: date.format(dateTime, 'DD/MM/YYYY [às] HH:mm'),
+        description: $('#todoDescription').val(),
+      });
+
+      // return false
+      return false;
+    };
+
+    // List of todo's
     this.todoList = [
       {
-        "date": Date.now(),
-        "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum",
-        "isDone": true
+        id: Math.floor(Math.random() * 10_000),
+        date: date.format(new Date(), 'DD/MM/YYYY [às] HH:mm'),
+        description: 'Passear o meu cão',
       },
       {
-        "date": Date.now(),
-        "description": "askdaskmdmaklsdmaslkdmlkasdasdasdasLorem ipsum",
-        "isDone": true
+        id: Math.floor(Math.random() * 10_000),
+        date: date.format(new Date(), 'DD/MM/YYYY [às] HH:mm'),
+        description: 'Ir para a escola de condução',
       },
       {
-        "date": Date.now(),
-        "description": "Lorem ipsorem ipsum",
-        "isDone": true
+        id: Math.floor(Math.random() * 10_000),
+        date: date.format(new Date(), 'DD/MM/YYYY [às] HH:mm'),
+        description: 'Tomar vacina da gripe',
       },
       {
-        "date": Date.now(),
-        "description": "Lom",
-        "isDone": true
+        id: Math.floor(Math.random() * 10_000),
+        date: date.format(new Date(), 'DD/MM/YYYY [às] HH:mm'),
+        description: 'Visitar o meu amigo no hospital',
       },
       {
-        "date": Date.now(),
-        "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLoKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
-        "isDone": true
+        id: Math.floor(Math.random() * 10_000),
+        date: date.format(new Date(), 'DD/MM/YYYY [às] HH:mm'),
+        description: 'Festa na casa do meu colega',
       },
       {
-        "date": Date.now(),
-        "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum",
-        "isDone": true
-      }
-    ]
+        id: Math.floor(Math.random() * 10_000),
+        date: date.format(new Date(), 'DD/MM/YYYY [às] HH:mm'),
+        description: 'Ler o livro que comprei',
+      },
+    ];
   }
-
-  ngOnInit(): void {
-  }
-
 }
