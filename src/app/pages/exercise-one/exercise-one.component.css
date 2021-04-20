@@ -2,7 +2,7 @@
   background: var(--bg);
 }
 .bg-card {
-  background: rgb(231, 219, 219);
+  background: rgb(219, 229, 231);
   padding: 2rem;
   border-radius: 1rem;
   width: 500px;
@@ -40,7 +40,7 @@ button:hover {
 }
 
 button:active .reload-icon {
-  animation: rotating 1s;
+  animation: rotating 1s
 }
 
 @keyframes rotating {

@@ -50,10 +50,9 @@ export class ExerciseOneComponent implements OnInit {
    * Function to get all users from database
    */
   fetchUsers() {
-    
     this.http
       .get<number>(this.SERVER_URL + `/users/count`)
-      .subscribe((val) => this.totalRecords = val[0].count)
+      .subscribe((val) => (this.totalRecords = val[0].count));
 
     // get all users and put them into a observable
     this.usersList = this.http.get<User[]>(
