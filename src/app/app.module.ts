@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ExerciseCardComponent } from './components/exercise-card/exercise-card.component';
@@ -9,6 +10,8 @@ import { ExerciseOneComponent } from './pages/exercise-one/exercise-one.componen
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ExerciseTwoComponent } from './pages/exercise-two/exercise-two.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { FormsModule } from '@angular/forms';
+import { UserItemComponent } from './components/user-item/user-item.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,9 @@ import { TodoComponent } from './components/todo/todo.component';
     HomePageComponent,
     ExerciseTwoComponent,
     TodoComponent,
+    UserItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

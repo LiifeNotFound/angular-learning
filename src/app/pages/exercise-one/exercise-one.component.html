@@ -1,1 +1,26 @@
-<form ></form>
+<div class="container-fluid d-flex justify-content-center align-items-center">
+  <div class="bg-card d-flex flex-column">
+    <h3 class="font-weight-bold text-center">Habib - Users</h3>
+    <button (click)="fetchUsers()">
+      <span class="material-icons reload-icon"> cached </span> Reload
+    </button>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-end">
+        <button (click)="fetchUsers()">
+          <span class="material-icons"> arrow_back_ios </span>
+        </button>
+      </div>
+      <div class="col-6 d-flex justify-content-start">
+        <button (click)="fetchUsers()">
+          <span class="material-icons"> arrow_forward_ios </span>
+        </button>
+      </div>
+    </div>
+    <ul class="list-unstyled">
+      <app-user-item
+        *ngFor="let user of usersList | async"
+        [user]="user"
+      ></app-user-item>
+    </ul>
+  </div>
+</div>

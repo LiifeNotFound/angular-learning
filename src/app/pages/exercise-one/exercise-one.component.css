@@ -1,0 +1,52 @@
+.container-fluid {
+  background: var(--bg);
+}
+.bg-card {
+  background: rgb(231, 219, 219);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 500px;
+  height: fit-content;
+  margin: 3rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s;
+  align-items: center;
+}
+
+button span {
+  transition: all 0.4s;
+}
+
+button .material-icons {
+  transition: transform 0.4s;
+}
+
+button:hover .reload-icon {
+  transform: rotate(-90deg);
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+button:active .reload-icon {
+  animation: rotating 1s
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(-00deg);
+  }
+  to {
+    transform: rotate(-450deg);
+  }
+}

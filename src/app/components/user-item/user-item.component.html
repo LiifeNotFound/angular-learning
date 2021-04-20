@@ -1,0 +1,16 @@
+<li class="media">
+  <img
+    height="64px"
+    class="mr-3"
+    [src]="
+      user.Image == 'default'
+        ? '../../../assets/img/angularLogo.jpg'
+        : user.Image
+    "
+    alt="Image"
+  />
+  <div class="media-body">
+    <h5 class="mt-0 mb-1">{{ user.Name }} {{ user.Surname }}</h5>
+    @{{ user.Username }}
+  </div>
+</li>

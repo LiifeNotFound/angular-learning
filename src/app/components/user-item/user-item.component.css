@@ -1,0 +1,19 @@
+li {
+  background: rgb(235, 235, 235);
+  border-bottom: 2px solid black;
+  border-radius: .2rem;
+  margin: .2rem 0;
+  overflow: hidden;
+  user-select: none;
+    transition: all .2s;
+}
+
+li:hover {
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+li:active {
+    transform: scale(1.01);
+  }
