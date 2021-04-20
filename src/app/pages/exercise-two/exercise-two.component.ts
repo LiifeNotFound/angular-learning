@@ -17,34 +17,32 @@ declare var $: any;
 export class ExerciseTwoComponent {
   // Define todo var
   todoList: { id: number; date: String; description: string }[];
-  delTodo: Function;
-  addTodo: Function;
-  handleSubmit: Function;
+
+  // set the function to delete todo's
+  delTodo(todo) {
+    this.todoList = this.todoList.filter((val) => val.id != todo.id);
+  }
+
+  // set the function to handle submit events
+  addTodo() {
+    // get full date
+    const dateTime = new Date($('#todoDate').val());
+
+    // add new todo to the array
+    this.todoList.push({
+      id: Math.floor(Math.random() * 10_000),
+      date: date.format(dateTime, 'DD/MM/YYYY [às] HH:mm'),
+      description: $('#todoDescription').val(),
+    });
+
+    // return false
+    return false;
+  }
 
   /**
    * Class constructor
    */
   constructor() {
-    // set the function to delete todo's
-    this.delTodo = (todo): void => {
-      this.todoList = this.todoList.filter((val) => val.id != todo.id);
-    }; 
-    // set the function to handle submit events
-    this.addTodo = (): boolean => {
-      // get full date
-      const dateTime = new Date($('#todoDate').val());
-
-      // add new todo to the array
-      this.todoList.push({
-        id: Math.floor(Math.random() * 10_000),
-        date: date.format(dateTime, 'DD/MM/YYYY [às] HH:mm'),
-        description: $('#todoDescription').val(),
-      });
-
-      // return false
-      return false;
-    };
-
     // List of todo's
     this.todoList = [
       {
