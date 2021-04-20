@@ -16,6 +16,7 @@ button {
   padding: 1rem;
   margin: 1rem 0;
   display: flex;
+  border-radius: 1rem;
   justify-content: center;
   transition: all 0.4s;
   align-items: center;
@@ -39,7 +40,7 @@ button:hover {
 }
 
 button:active .reload-icon {
-  animation: rotating 1s
+  animation: rotating 1s;
 }
 
 @keyframes rotating {
