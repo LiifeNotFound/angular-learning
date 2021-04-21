@@ -1,14 +1,20 @@
 <div class="container-fluid d-flex justify-content-center align-items-center">
   <div class="bg-card d-flex flex-column">
+    <!-- Back button container -->
     <div class="row">
       <div class="col-12">
-        <a href="../"><span class="material-icons text-black-50"> arrow_back_ios </span></a>
+        <a href="../"
+          ><span class="material-icons text-black-50"> arrow_back_ios </span></a
+        >
       </div>
     </div>
+    <!-- Title -->
     <h3 class="font-weight-bold text-center">Habib - Users</h3>
+    <!-- Reload button -->
     <button (click)="fetchUsers()">
       <span class="material-icons reload-icon"> cached </span> Reload
     </button>
+    <!-- Paggination container -->
     <div class="row">
       <div class="col-5 d-flex justify-content-end">
         <button (click)="previousPage()">
@@ -16,7 +22,7 @@
         </button>
       </div>
       <div class="col-2 d-flex justify-content-center align-items-center">
-        <h2>{{page}}</h2>
+        <h2>{{ page }}</h2>
       </div>
       <div class="col-5 d-flex justify-content-start">
         <button (click)="nextPage()">
@@ -24,17 +30,20 @@
         </button>
       </div>
     </div>
+    <!-- Description container -->
     <div class="row">
       <div class="col-12 d-flex justify-content-start">
-        <h5>Showing {{pageLimit}} users per page</h5>
+        <h5>Showing {{ pageLimit }} users per page</h5>
       </div>
     </div>
     <div class="row">
       <div class="col-12 d-flex justify-content-start">
-        <h5>There are {{totalRecords}} users</h5>
+        <h5>There are {{ totalRecords }} users</h5>
       </div>
     </div>
+    <!-- List of users -->
     <ul class="list-unstyled">
+      <!-- User item component -->
       <app-user-item
         *ngFor="let user of usersList | async"
         [user]="user"
