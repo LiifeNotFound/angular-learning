@@ -1,17 +1,19 @@
 .container-fluid {
-  background: var(--bg);
+  padding: 0;
 }
+
 .bg-card {
-  background: rgb(219, 229, 231);
-  padding: 2rem;
+  background: rgb(241, 241, 241);
+  padding: 1rem;
   border-radius: 1rem;
-  width: 600px;
+  width: 100%;
   height: fit-content;
-  margin: 3rem;
+  margin: 1rem 0;
 }
 
 button {
   outline: none;
+  background: rgb(255, 255, 255);
   border: none;
   padding: 1rem;
   display: flex;
@@ -28,25 +30,11 @@ button span {
 button .material-icons {
   transition: transform 0.4s;
 }
-
-button:hover .reload-icon {
-  transform: rotate(-90deg);
-}
-
 button:hover {
   background: black;
   color: white;
 }
 
 button:active .reload-icon {
-  animation: rotating 1s
-}
-
-@keyframes rotating {
-  from {
-    transform: rotate(-00deg);
-  }
-  to {
-    transform: rotate(-450deg);
-  }
+  animation: rotating 1s;
 }

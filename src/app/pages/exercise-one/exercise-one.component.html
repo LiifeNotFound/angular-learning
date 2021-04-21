@@ -10,8 +10,16 @@
     </div>
     <!-- Title -->
     <h3 class="font-weight-bold text-center">Habib - Users</h3>
+    <!-- Add user button -->
+    <button (click)="addUserButton()">
+      <span class="material-icons"> add </span> New
+    </button>
+    <!-- User edit component -->
+    <app-user-edit *ngIf="(userToEdit && userBtnAction) || userBtnAction == 'Create'"
+    [user]='userToEdit'
+    [action]='userBtnAction'></app-user-edit>
     <!-- Reload button -->
-    <button (click)="fetchUsers()">
+    <button (click)="fetchUsers()" class="mt-2 mb-4">
       <span class="material-icons reload-icon"> cached </span> Reload
     </button>
     <!-- Paggination container -->
@@ -47,6 +55,7 @@
       <app-user-item
         *ngFor="let user of usersList | async"
         [user]="user"
+        [clickAction]="handleUserClick"
       ></app-user-item>
     </ul>
   </div>

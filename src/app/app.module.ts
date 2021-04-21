@@ -12,6 +12,7 @@ import { ExerciseTwoComponent } from './pages/exercise-two/exercise-two.componen
 import { TodoComponent } from './components/todo/todo.component';
 import { FormsModule } from '@angular/forms';
 import { UserItemComponent } from './components/user-item/user-item.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,9 @@ import { UserItemComponent } from './components/user-item/user-item.component';
     ExerciseTwoComponent,
     TodoComponent,
     UserItemComponent,
+    UserEditComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule, ],
   providers: [],
   bootstrap: [AppComponent],
 })

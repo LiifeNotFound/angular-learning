@@ -18,6 +18,22 @@ export class ExerciseOneComponent implements OnInit {
   pageLimit: number = 4; // Limit per page
   totalRecords: number = 0; // Total items
 
+  // user edit
+  userBtnAction: string = '';
+  userToEdit: User;
+  isAddUserButtonVisible: boolean = false;
+  handleUserClick = ((action, user) => {
+    this.userBtnAction = action;
+    this.userToEdit = user;
+  }).bind(this);
+
+  /**
+   * Function to add user
+   */
+  addUserButton() {
+    this.userBtnAction = 'Create';
+  }
+
   /**
    * Function to go to next page
    */

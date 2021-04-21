@@ -10,4 +10,5 @@ export class UserItemComponent {
   constructor() {}
 
   @Input('user') user: any;
+  @Input('clickAction') onItemClick: Function;
 }
