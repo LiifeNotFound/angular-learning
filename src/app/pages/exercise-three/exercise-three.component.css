@@ -1,0 +1,20 @@
+.container-fluid {
+  background: var(--bg);
+}
+.bg-card {
+  background: rgb(219, 229, 231);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 600px;
+  height: fit-content;
+  margin: 3rem;
+}
+textarea {
+  padding: 2rem;
+  border-radius: 1rem;
+  line-height: 40px;
+}
+
+textarea:focus {
+  outline: none;
+}

@@ -13,6 +13,7 @@ import { TodoComponent } from './components/todo/todo.component';
 import { FormsModule } from '@angular/forms';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { ExerciseThreeComponent } from './pages/exercise-three/exercise-three.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     TodoComponent,
     UserItemComponent,
     UserEditComponent,
+    ExerciseThreeComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule, ],
   providers: [],
